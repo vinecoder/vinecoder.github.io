@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'github-pages' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'github-pages', null ]
+5 verbose cache add name=undefined spec="github-pages" args=["github-pages",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'github-pages',
+6 verbose parsed url   path: 'github-pages',
+6 verbose parsed url   href: 'github-pages' }
+7 silly lockFile db17413c-github-pages github-pages
+8 verbose lock github-pages /home/vinicius/.npm/db17413c-github-pages.lock
+9 silly lockFile db17413c-github-pages github-pages
+10 silly lockFile db17413c-github-pages github-pages
+11 verbose addNamed [ 'github-pages', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 69594b50-github-pages github-pages@
+14 verbose lock github-pages@ /home/vinicius/.npm/69594b50-github-pages.lock
+15 silly addNameRange { name: 'github-pages', range: '*', hasData: false }
+16 verbose url raw github-pages
+17 verbose url resolving [ 'https://registry.npmjs.org/', './github-pages' ]
+18 verbose url resolved https://registry.npmjs.org/github-pages
+19 info trying registry request attempt 1 at 16:37:02
+20 http GET https://registry.npmjs.org/github-pages
+21 http 404 https://registry.npmjs.org/github-pages
+22 silly registry.get cb [ 404,
+22 silly registry.get   { 'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=0',
+22 silly registry.get     'content-length': '2',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Thu, 10 Sep 2015 19:37:02 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-atl6225-ATL',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1441913822.778906,VS0,VE116' } ]
+23 silly addNameRange number 2 { name: 'github-pages', range: '*', hasData: true }
+24 silly addNameRange versions [ undefined, [] ]
+25 error TypeError: Cannot read property 'latest' of undefined
+25 error     at next (/usr/share/npm/lib/cache.js:687:35)
+25 error     at /usr/share/npm/lib/cache.js:675:5
+25 error     at saved (/usr/share/npm/node_modules/npm-registry-client/lib/get.js:142:7)
+25 error     at /usr/lib/nodejs/graceful-fs/polyfills.js:133:7
+25 error     at Object.oncomplete (fs.js:107:15)
+26 error If you need help, you may report this log at:
+26 error     <http://github.com/isaacs/npm/issues>
+26 error or email it to:
+26 error     <npm-@googlegroups.com>
+27 error System Linux 3.13.0-24-generic
+28 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "github-pages"
+29 error cwd /media/vinicius/DADOS/WORKSPACE/SITES/viniblessing.github.io
+30 error node -v v0.10.25
+31 error npm -v 1.3.10
+32 error type non_object_property_load
+33 verbose exit [ 1, true ]
