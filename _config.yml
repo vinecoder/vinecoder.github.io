@@ -4,6 +4,20 @@ meta_description: "Your New Jekyll Site, Blogging about stuffs"
 
 aboutPage: false
 
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble: 
+  email: contact@viniciustrindade.com.br
+  facebook: 
+  flickr: 
+  github: viniblessing
+  instagram: 
+  linkedin: viniciustrindade
+  pinterest: 
+  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
+  twitter: 
+  stackoverflow: users/889849/viniblessing # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+
 markdown: redcarpet
 highlighter: pygments
 
