@@ -10,12 +10,12 @@ footer-links:
   email: contact@viniciustrindade.com.br
   facebook: 
   flickr: 
-  github: viniblessing
+  github: viniciustrindade
   instagram: 
   linkedin: viniciustrindade
   pinterest: 
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: 
+  twitter: iamvinitrindade
   stackoverflow: users/889849/viniblessing # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 
@@ -33,7 +33,7 @@ disqus_shortname: 'viniblessing'
 # Details for the RSS feed generator
 url:            'http://blog.viniciustrindade.com.br'
 author:         'Vinicius Trindade'
-authorTwitter:  'viniblessing'
+authorTwitter:  'iamvinitrindade'
 
 permalink:       /:year/:title/
 
