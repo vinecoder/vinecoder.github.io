@@ -24,7 +24,7 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-resume: 'http://www.viniciustrindade.com.br'
+resume: 'http://www.viniciustrindade.com.br/resume.html'
 domain_name: 'http://blog.viniciustrindade.com.br'
 google_analytics: 'UA-27535758-1'
 disqus: true
