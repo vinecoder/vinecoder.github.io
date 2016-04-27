@@ -24,7 +24,7 @@
   </head>
 
   <body class="impress-not-supported">
-  <div class="fallback-message">
+  <div class="fallback-message" style="display:none">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
  </div>
@@ -59,8 +59,6 @@
     </div>
     
       <div id="main" role="main" class="container">
-
-
       <div id="impress">
   	      {{ content }}
       </div>
@@ -77,7 +75,7 @@
       </div>
     {% endif %}
 
-	<div class="hint">
+	<div class="hint" style="display:none" >
 	    <p>Use a spacebar or arrow keys to navigate </p>
 	</div>
 	<script>
