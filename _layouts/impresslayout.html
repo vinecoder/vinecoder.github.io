@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="{{ site.baseurl }}/assets/css/impress-demo.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body class="impress-not-supported">
+  <div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+ </div>
+
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
+
+          <nav>
+            {% if page.url != "/" %}
+             <a href="{{ site.baseurl }}/">Home</a>
+            {% endif %}
+            <a target="_blank" href="{{ site.resume }}">Resume</a>
+           {% if page.url != "/about/" %}
+            {% if site.aboutPage %}
+                <a href="{{ site.baseurl }}/about">About</a>
+            {% endif %}
+          {% endif %}
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+	    <div id="impress">
+	      {{ content }}
+
+
+	    </div>
+    </div>
+
+    {% if site.footer-links.length > 0 %}
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+
+            {% include svg-icons.html %}
+          </footer>
+        </div>
+      </div>
+    {% endif %}
+
+	<div class="hint">
+	    <p>Use a spacebar or arrow keys to navigate </p>
+	</div>
+	<script>
+		if ("ontouchstart" in document.documentElement) { 
+		    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+		}
+	</script>
+
+
+	<script src="{{ site.baseurl }}/assets/js/impress.js"></script>
+	<script>impress().init();</script>
+    {% include analytics.html %}
+  </body>
+</html>
