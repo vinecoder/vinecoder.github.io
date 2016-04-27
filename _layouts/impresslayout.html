@@ -1,6 +1,12 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+
+<html lang="en">
   <head>
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" /> 
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
@@ -8,7 +14,8 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+<link href="{{ site.baseurl }}/assets/css/impress-clicknav.css" rel="stylesheet" />
+<link href="{{ site.baseurl }}/assets/css/impress-progress.css" rel="stylesheet" />
     <link href="{{ site.baseurl }}/assets/css/impress-demo.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
@@ -32,7 +39,7 @@
             <p class="site-description">{{ site.description }}</p>
           </div>
 
-          <nav>
+          <nav style="z-index: 9999">
             {% if page.url != "/" %}
              <a href="{{ site.baseurl }}/">Home</a>
             {% endif %}
@@ -43,16 +50,20 @@
             {% endif %}
           {% endif %}
           </nav>
+
+          <div class="progressbar"><div></div></div>
+          <div class="progress"></div>
+
         </header>
       </div>
     </div>
-
-    <div id="main" role="main" class="container">
-	    <div id="impress">
-	      {{ content }}
+    
+      <div id="main" role="main" class="container">
 
 
-	    </div>
+      <div id="impress">
+  	      {{ content }}
+      </div>
     </div>
 
     {% if site.footer-links.length > 0 %}
@@ -74,10 +85,14 @@
 		    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 		}
 	</script>
+  
 
-
+  <script src="{{ site.baseurl }}/assets/lib/jquery/dist/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/impress-progress.js"></script>
 	<script src="{{ site.baseurl }}/assets/js/impress.js"></script>
 	<script>impress().init();</script>
+
+
     {% include analytics.html %}
   </body>
 </html>

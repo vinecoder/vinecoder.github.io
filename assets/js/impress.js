@@ -700,6 +700,7 @@
         // need to control the presentation that was just initialized.
         var api = event.detail.api;
 
+
         // KEYBOARD NAVIGATION HANDLERS
 
         // Prevent default keydown action when one of supported key is pressed.
@@ -731,9 +732,8 @@
             if ( event.shiftKey || event.altKey || event.ctrlKey || event.metaKey ) {
                 return;
             }
-
             if ( event.keyCode === 9 ||
-               ( event.keyCode >= 32 && event.keyCode <= 34 ) ||
+               ( event.keyCode >= 32 && event.keyCode <= 36 ) ||
                ( event.keyCode >= 37 && event.keyCode <= 40 ) ) {
                 switch ( event.keyCode ) {
                     case 33: // Page up
@@ -741,13 +741,16 @@
                     case 38: // Up
                              api.prev();
                              break;
-                    case 9:  // Tab
+                   // case 9:  // Tab
                     case 32: // Space
                     case 34: // Page down
                     case 39: // Right
                     case 40: // Down
                              api.next();
                              break;
+                    case 36: // HOME
+                          api.goto("step-1", 500 );
+                             break;                    
                 }
 
                 event.preventDefault();
